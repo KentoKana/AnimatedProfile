@@ -1,0 +1,775 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Fauna One', serif;
+	background-color: rgb(13, 14, 15);
+	font-size: 18px;
+	cursor: default;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0	;
+}
+
+a {
+	text-decoration: none;
+	color:rgb(204, 104, 18);
+}
+
+
+
+#body-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.highlight {
+	/*green*/
+	color: rgb(98, 255, 20); 
+}
+
+a.highlight-link {
+	color: rgb(0, 182, 255);
+}
+
+span.highlight:hover {
+	animation: textGrow 2s normal;
+
+
+}
+
+/*=================Navigation=================================*/
+img#developerLogo{
+	width: 70px;
+	margin: 0 0 0 5px;
+	position: absolute;
+	top:0;
+	left: 0;
+	filter: grayscale(100%);
+	transition: 0.5s ease;
+}
+
+img#developerLogo:hover {
+	transform: rotate(25deg);
+}
+
+div#nav-container:hover img#developerLogo {
+	animation: logoRotate 0.4s ease-out;
+	transition: 0.4s;
+}
+
+@keyframes logoRotate {
+	0% {
+		transform: rotateY(90deg);
+	}
+	50%{
+		transform: rotateY(720deg);
+	} 
+	80%{
+		transform: rotateY(90deg);
+	}
+
+	85%{
+		transform: rotateY(30deg);
+	}
+	90% {
+		transform: rotateY(20deg);
+	}
+
+}
+
+
+div#nav-container {
+	font-family: 'Marcellus SC', serif;
+	display:flex;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(38, 36, 36);
+	transition: 0.5s ease-in-out;
+	color: rgb(204, 104, 18);
+	position: fixed;
+	z-index: 99;
+	width: 200px;
+
+}
+
+#nav-container::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100vh;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease-in-out;
+	z-index: -111;
+}
+
+#nav-container:hover:after {
+	width: 100%;
+	background-color: rgb(6, 28, 63);
+}
+
+#nav-container:hover img#developerLogo {
+	filter: grayscale(0%);
+	transition: .5s ease;
+
+}
+
+
+#nav-container a{
+	color: rgb(105, 108, 109);
+	transition: 0.5s ease-in-out;
+
+
+}
+
+#nav-container:hover a {
+	color: rgb(204, 104, 18);
+	transition: 0.5s ease-in-out;
+}
+
+/*
+Referenced from:;
+https://stackoverflow.com/questions/26726436/css-bottom-border-transition-expand-from-middle
+-Adds a block-level pseudo element after the anchor tag, which takes up 3px height. Initially, width is 0, but width takes up 100% on hover.
+*/
+#nav-container a:after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease-in-out;
+}
+
+#nav-container a:hover:after {
+	width: 100%;
+	background-color:rgb(204, 104, 18);
+
+}
+
+#nav-container a:hover {
+	color: rgb(204, 104, 18);
+	transition: 0.5s ease-in-out;
+}
+
+
+#nav-container nav ul li:first-child{
+	position: absolute;
+	left:0;
+	top:0;
+
+}
+
+#nav-container nav ul li:nth-child(2){
+	margin-top: 30vh;
+}
+
+#nav-container nav ul:not(:first-child) {
+	margin-top: 4em ;
+}
+
+
+#nav-container nav ul li {
+	padding: 0.7em;
+}
+
+div#burgerMenu {
+	display: none;
+}
+
+#burgerMenuIcon {
+	transition: 0.5s ease-out;
+}
+
+
+#content-container {
+	display: flex;
+	flex-direction: column;
+	color: rgb(204, 104, 18);
+	height: 100vh;
+	position: relative;
+	margin: 0 4em 0 0;
+	justify-content: center;
+
+}
+
+.hidden {
+	display: none;
+}
+
+/*Title page*/
+
+main#home.home.section {
+	margin-right: 2em;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	margin-left: 2em;
+	font-size: 2em;
+}
+
+main.home.section {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 5em 0 250px;
+}
+
+
+h1 {
+	font-size: 2em;
+	text-align: left;
+}
+
+
+.line-break {
+	display: block;
+	margin-top: 1em;
+
+}
+
+#profession {
+	display: block;
+	position: relative;
+	margin-bottom: 1.2em;
+}
+
+.textRotate{
+	animation: textRotate 15s infinite;
+	position: relative;
+}
+
+.textRotate2{
+	animation: textRotate2 15s infinite;
+	position: relative;
+}
+
+#prof1 {
+	display:block;
+	animation-delay: 0s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+}
+
+#prof2{
+	display:block;
+	animation-delay: 5s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+}
+
+#prof3{
+	display:block;
+	animation-delay: 10s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+}
+
+#greet1{
+	animation-delay: 0s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+
+}
+#greet2{
+	animation-delay: 5s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+}
+#greet3{
+	animation-delay: 10s;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+}
+
+@keyframes textRotate {
+	0% { 
+		opacity:0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+		margin-top: 0;
+	}
+
+}
+
+@keyframes textRotate2 {
+	0% { 
+		opacity:0;
+	}
+	25% {
+		opacity: 1;
+		margin-left: 0.4em;
+	}
+	50% {
+		opacity:0;
+		margin-left: 0.4em;
+	}
+	100% {
+		opacity:0;
+		margin-left: 0;
+	}
+
+}
+
+/*About me seciton*/
+#aboutMe .section-wrap {
+	margin: 0 5em 0 250px;
+}
+
+#aboutMe h2 {
+	font-size: 5em;
+	text-align: left;
+}
+
+#aboutMe p {
+	color: white;
+}
+
+/*Skill Set Section*/
+.skillSet.section {
+	top:0;
+	position: absolute;
+	overflow: hidden;
+}
+
+.grid-container {
+
+	display: grid;
+	grid-template-columns: repeat(3, minmax(25vw, 25vw));
+	grid-template-rows: repeat(2, minmax(46vh,1fr));
+	grid-gap: 5px;
+	color: #444;
+	width: 100%;
+	margin-left: 230px;
+	margin-top: 10px;
+
+}
+
+
+.grid-item {
+	background-color: #444;
+	color: #fff;
+	padding: 20px;
+	font-size: 150%;
+	animation: expand 1s, gridRotate 1s ;
+	transition: 1s;
+}
+
+.grid-item:hover {
+	transition: 1s ease-in;
+	color: rgb(204, 104, 18);
+	background-color: rgb(38, 36, 36);
+}
+
+.grid-item:hover h3::before {
+	content: '{';
+}
+
+.grid-item:hover h3::after {
+	content: '}';
+}
+
+
+.grid-item.b{
+	animation-delay:.05s;
+}
+
+.grid-item.c{
+	animation-delay:.1s;
+}
+
+.grid-item.d {
+	animation-delay:.15s;
+}
+
+.grid-item.e {
+	animation-delay:.20s;
+}
+
+.grid-item.f {
+	animation-delay:.25s;
+}
+
+.grid-item.grow{
+	transition: 1s linear auto;
+}
+
+@keyframes expand{
+	from{
+		width:0;
+
+	}
+	to{
+		width: 100%;
+	}
+}
+
+@keyframes gridRotate{
+	0%{
+		transform: rotateX(90deg);
+	}
+	50%{
+		transform: rotateX(180deg);
+		transform: rotateY(180deg);
+	}
+	100%{
+		transform: rotateX(360deg);
+		
+	}
+}
+
+
+
+/*Contact Me Page*/
+.contact.section h2 {
+	font-size: 4.5em;
+}
+
+.contact.section {
+	text-align: center;
+	margin-left: 230px;
+}
+
+form input {
+	margin: auto;
+	text-align: center;
+}
+
+#contact input {
+	display: block;
+	height: 2em;
+	margin-bottom: 1em;
+}
+
+#contact textarea {
+	resize: none;
+	width: 300px;
+	height: 300px;
+}
+
+#submitButton {
+	margin: auto;
+	display: block;
+}
+
+/*Typewriter animation*/
+/*https://css-tricks.com/snippets/css/typewriter-effect/*/
+.typewriter {
+	overflow: hidden; 
+	border-right: .1em solid orange;
+	white-space: nowrap;
+	margin: 0 auto;
+	animation: 
+	typing 3s steps(40, end),
+	textcursorAnim .75s step-end infinite;
+}
+
+@keyframes typing {
+	/*Container of text is initially 0. Goes to 100% at the end of animation.*/
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes textcursorAnim {
+	from, to { border-color: transparent }
+	50% { border-color: rgb(204, 104, 18) }
+}
+
+/*Text Grow*/
+
+@keyframes textGrow{
+	from{
+		font-size: 100%;
+	}
+	to{
+		font-size: 100%;
+
+	}
+	50% {
+		font-size: 120%;
+	}
+}
+
+/*Loading Screen Animation*/
+.loadingScreen {
+	white-space: nowrap;
+	position: absolute;
+	margin-left: 250px;
+}
+
+
+.loadingScreen #progressbar-container{
+	/*	border:  rgb(0, 182, 255) solid 1px;*/
+	color: orange;
+	background-color: orange;
+
+}
+
+.loadingScreen #progressbar {
+
+	height: 35px;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: rgb(6, 28, 63);
+	animation: 
+	progressBar 1.3s linear;
+	z-index: 9999;
+	margin: 0;
+}
+
+
+@keyframes progressBar{
+	from{
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+
+/*https://codepen.io/P1N2O/pen/pyBNzX*/
+body.loading {
+	width: 100vw;
+	height: 90vh;
+	background: linear-gradient(350deg, grey, rgb(13, 14, 15), orange);
+	background-size: 400% 400%;
+	animation: Gradient 20s infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@media only screen and (max-width: 842px) {
+	body {
+		font-size: 14px;
+		overflow-x: hidden;
+
+	}
+
+	div#content-container {
+		margin: 0;
+		width: 120%;
+	}
+
+	h1 {
+		font-size: 1.5em;
+		text-align: left;
+	}
+
+	h1.typewriter{
+		margin: 0;
+	}
+
+	main#home.home.section {
+		margin-left: 250px;
+		margin-right: 0;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 674px) {
+	#body-wrap {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	img#developerLogo{
+
+		filter: grayscale(0%);
+
+	}
+	div#nav-container {
+		width:0%;
+	}
+
+	#navUl{
+		margin-left: -100px;
+		transition: 0.4s ease-in-out;
+	}
+
+	#nav-container:hover:after {
+		display: none;
+	}
+
+	#nav-container a:hover::after {
+		display: none;
+
+	}
+
+	div#nav-container.show{
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#navUl.show {
+		display: block;
+		overflow-x: hidden;
+		margin-left: 0px;
+	}
+
+
+	div#burgerMenu {
+		display: block;
+		position: absolute;
+		right:0;
+		top:0;
+		color: white;
+		font-size: 40px;
+		margin: 10px 20px 0 0;
+		z-index: 99999;
+	}
+
+	#burgerMenuIcon.show {
+		transform: rotate(90deg);
+		transition: 0.5s ease-out;
+	}
+
+
+
+	div#content-container {
+		justify-content: center;
+		text-align: center;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	h1.typewriter {
+		margin: 0;
+		text-align: center;
+	}
+
+
+	main.home.section {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 5em 0 100px;
+	}
+
+	main#home.home.section {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	@keyframes textRotate2 {
+		0% { 3			opacity:0;
+		}
+		25% {
+			opacity: 1;
+			margin-left: 0em;
+		}
+		50% {
+			opacity:0;
+			margin-left: 0.;
+		}
+		100% {
+			opacity:0;
+			margin-left: 0;
+		}
+
+	}
+
+	#prof1, #prof2, #prof3, #greet1, #greet2, #greet3 {
+		left:0;
+		right: 0;
+		margin: 0 auto;
+		display: block;
+	}
+
+	#aboutMe div.section-wrap{
+		margin: 0 3em 0 3em;
+		height: auto;
+		text-align: center;
+	}
+
+	#aboutMe div.section-wrap h2 {
+		font-size: 3em;
+		text-align: center;
+	}
+
+	.skillSet div.section-wrap{
+		margin: 0;
+		height: auto;
+		text-align: center;
+		overflow-y: show;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(50vw, 280px));
+		grid-template-rows: repeat(3, minmax(280px, 280px));
+		grid-gap: 1px;
+		color: #444;
+		width: 90%;
+		margin-left: 0em;
+		margin-right: 0em;
+		margin-top: 60px;
+
+
+	}
+
+	div.loadingScreen {
+		margin: 0 1em 0 1em;
+		width: 300px;
+		text-align: center;
+
+
+	}
+	#progressbar-container {
+		margin: 0;
+		width: 300px;
+		padding: 0;
+
+	}
+
+	.loadingScreen #progressbar-container{
+		position: relative;
+		/*	border:  rgb(0, 182, 255) solid 1px;*/
+		height: auto;
+		color: orange;
+		margin-left: 8em;
+
+	}
+
+	h2#progressbar{
+		font-size: 1em;
+/*		text-align: center;
+*/	}
+
+}

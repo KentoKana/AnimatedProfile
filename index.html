@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="jquery.js"></script>
+	<meta charset="utf-8">
+	<title>Kento Kanazawa | Resume</title>
+	<link rel='stylesheet'  type='text/css' href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fauna+One|Marcellus+SC" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+</head>
+<body>
+	<div id="body-wrap">
+		<div id="burgerMenu">
+			<i id="burgerMenuIcon" class="fas fa-bars"></i>
+		</div>
+		<div id="nav-container">
+			<nav>
+				<ul id="navUl">
+					<li><a href="#" class="navLink logo"><img src="logo.png" alt="Developer Logo Link" id="developerLogo"></a></li>
+					<li><a href="#" class="navLink home">Home</a></li>
+					<li><a href="#" class="navLink aboutMe">About Me</a></li>
+					<li><a href="#" class="navLink skillSet">Skill Set</a></li>
+					<li><a href="#" class="navLink contact">Contact Me</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id='content-container'>
+			<main id="home" class="home logo section">
+				<h1 class="typewriter">Hey! I'm <span class="highlight">Kento</span>.</h1>
+				<p>
+					I'm a 
+					<span id="profession" class="highlight">
+						<span class="textRotate" id="prof1" >Web Developer </span>
+						<span class="textRotate" id="prof2">Coffee Enthusiast</span>
+						<span class="textRotate" id="prof3">Consumer of Food</span>
+					</span> based in Ontario.
+					<span class="line-break">
+						Let's <a href="#"  id="chat" class="highlight-link headtext toContact">
+							<span class="textRotate2" id="greet1">Build something cool together!</span>
+							<span class="textRotate2" id="greet2">Chat while drinking coffee.</span>
+							<span class="textRotate2" id="greet3">Code together while eating delicious food.</span>
+						</a>
+					</span>
+				</p>
+
+			</main>
+			<section id="aboutMe" class="aboutMe section hidden">
+				<div class="section-wrap">
+					<h2 class="typewriter">About Me.</h2>			
+					<p>
+						I have an undergraduate degree in psychology, and I have a few years of experience working in non-profits and social services.  
+					</p>	
+					<p>
+						I was always interested in creative fields, and I learned programming in order to build fun looking websites. I a keen eye for <span class="highlight"> Responsiveness and Accessibility</span> in a website. 
+					</p>
+					<p>
+						Right now, I am primarily interested in <span class="highlight">Front-End Development</span>, but I'm quickly gaining interest in Back-End Development as well. 
+					</p>
+					<p>
+						I am an avid learner. I like socializing. Let's work together to create something interesting!
+					</p>
+				</div>
+			</section>
+
+			<section class="skillSet section hidden">
+				<div class="section-wrap">
+					<div class="grid-container">
+						<div class="grid-item a">
+							<h3>CSS 3</h3>
+						</div>
+						<div class="grid-item b">
+							<h3>JavaScript</h3>
+						</div>
+						<div class="grid-item c">
+							<h3>HTML 5</h3>
+						</div>
+						<div class="grid-item d">
+							<h3>SASS</h3>
+						</div>
+						<div class="grid-item e">
+							<h3>ASP.NET</h3>
+						</div>
+						<div class="grid-item f">
+							<h3>GIT</h3>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="contact section hidden toContact">
+				<div class="section-wrap">
+					<h2 class="typewriter">Contact Me</h2>			
+					<p>
+						If you like my work and would like to reach out, please feel free to contact me using the form below!
+					</p>	
+					<form action="index.html" method="POST">
+						<input type="text" class="formEl" id="name" placeholder="Your Name">
+						<input type="text" class="formEl" id="email" placeholder="Your E-mail">
+						<textarea  class="formEl" id="messageArea" placeholder="Your Message"></textarea>
+						<button class="formEl" id="submitButton">Submit Message</button>
+					</form>
+
+				</div>
+			</section>
+
+			<div class="loadingScreen hidden">
+				<div id="progressbar-container">
+					<h2 id="progressbar">Frantically generating content...</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
