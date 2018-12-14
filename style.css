@@ -772,6 +772,7 @@ body.loading {
 		margin:0;
 		width: 250px;
 		padding: 0;
+		text-align: center;
 	}
 
 	h2#progressbar{
@@ -788,13 +789,15 @@ body.loading {
 	main p {
 		margin: 0 -2em 0 -2em;
 	}
-	
-	.loadingScreen {
-		white-space: nowrap;
-		position: static;
-		margin-left: 250px;
+
+
+	#aboutMe div.section-wrap{
+		margin: 5em 3em 0 3em;
+		height: auto;
+		text-align: center;
 	}
 
+	
 	.contact.section h2{
 		font-size: 2em;
 	}
@@ -809,6 +812,13 @@ body.loading {
 		width: 200px;
 		height: 200px;
 	}
+
+	.loadingScreen {
+		white-space: nowrap;
+		position: static;
+		margin-left: 250px;
+	}
+
 
 
 }
