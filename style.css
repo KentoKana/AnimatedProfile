@@ -615,7 +615,7 @@ body.loading {
 	div#nav-container {
 		width:0%;
 		background-color: rgb(6, 28, 63);
-		color: orange;
+		color: rgb(204, 104, 18);
 	}
 
 	#navUl{
@@ -630,6 +630,12 @@ body.loading {
 	#nav-container a:hover::after {
 		display: none;
 	}
+
+	#nav-container #navUl a {
+		text-decoration: none;
+		color:orange;
+	}
+
 
 	div#nav-container.show{
 		display: block;
@@ -792,7 +798,7 @@ body.loading {
 
 
 	#aboutMe div.section-wrap{
-		margin: 5em 3em 0 3em;
+		margin: 3em 3em 0 3em;
 		height: auto;
 		text-align: center;
 	}
@@ -804,7 +810,7 @@ body.loading {
 
 	.contact.section {
 		text-align: center;
-		margin: 0 2em 0 2em;
+		margin: 3em 2em 0 2em;
 	}
 
 	#contact textarea {
