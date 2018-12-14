@@ -454,7 +454,6 @@ h1 {
 
 form input {
 	margin: auto;
-	text-align: center;
 }
 
 #contact input {
@@ -601,7 +600,7 @@ body.loading {
 }
 
 
-@media only screen and (max-width: 674px) {
+@media only screen and (max-width: 674px) and (orientation: portrait) {
 	#body-wrap {
 		display: flex;
 		flex-direction: column;
@@ -787,7 +786,7 @@ body.loading {
 
 }
 
-@media only screen and (max-width: 436px) {
+@media only screen and (max-width: 436px) and (orientation: portrait) {
 	h1 {
 		font-size: 1em;
 	}
@@ -809,7 +808,6 @@ body.loading {
 	}
 
 	.contact.section {
-		text-align: center;
 		margin: 3em 2em 0 2em;
 	}
 
