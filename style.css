@@ -398,7 +398,9 @@ h1 {
 }
 
 @keyframes swing {
-	0% { transform: rotate(6deg); }
+	0% { 
+		transform: rotate(6deg); 
+	}
 	100% { transform: rotate(-6deg); }
 }
 
@@ -614,11 +616,10 @@ body.loading {
 	}
 }
 
-@media only screen and (max-width: 842px) {
+@media only screen and (max-width: 998px) {
 	body {
 		font-size: 14px;
 		overflow-x: hidden;
-
 	}
 
 	div#content-container {
@@ -644,7 +645,7 @@ body.loading {
 }
 
 
-@media only screen and (max-width: 674px) {
+@media only screen and (max-width: 985px) {
 	#body-wrap {
 		display: flex;
 		flex-direction: column;
