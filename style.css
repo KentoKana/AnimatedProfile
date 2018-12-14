@@ -42,7 +42,6 @@ a.highlight-link {
 span.highlight:hover {
 	animation: textGrow 2s normal;
 
-
 }
 
 /*=================Navigation=================================*/
@@ -112,7 +111,7 @@ div#nav-container {
 	z-index: -111;
 }
 
-#nav-container:hover:after {
+#nav-container:hover::after {
 	width: 100%;
 	background-color: rgb(6, 28, 63);
 }
@@ -414,7 +413,7 @@ h1 {
 }
 
 .grid-item.grow{
-	transition: 1s linear auto;
+	transition: 1s linear;
 }
 
 @keyframes expand{
@@ -522,9 +521,9 @@ form input {
 
 
 .loadingScreen #progressbar-container{
-	/*	border:  rgb(0, 182, 255) solid 1px;*/
 	color: orange;
 	background-color: orange;
+	/*font and bg are the same colors for an effect.*/
 
 }
 
@@ -610,12 +609,13 @@ body.loading {
 	}
 
 	img#developerLogo{
-
 		filter: grayscale(0%);
-
 	}
+
 	div#nav-container {
 		width:0%;
+		background-color: rgb(6, 28, 63);
+		color: orange;
 	}
 
 	#navUl{
@@ -629,7 +629,6 @@ body.loading {
 
 	#nav-container a:hover::after {
 		display: none;
-
 	}
 
 	div#nav-container.show{
@@ -641,13 +640,18 @@ body.loading {
 	#navUl.show {
 		display: block;
 		overflow-x: hidden;
+		overflow-y: hidden;
 		margin-left: 0px;
 	}
 
 
+	img#developerLogo:hover {
+		transform: none;
+	}
+
 	div#burgerMenu {
 		display: block;
-		position: absolute;
+		position: fixed;
 		right:0;
 		top:0;
 		color: white;
@@ -657,8 +661,12 @@ body.loading {
 	}
 
 	#burgerMenuIcon.show {
-		transform: rotate(90deg);
-		transition: 0.5s ease-out;
+		transform: none;
+		transition: none;
+	}
+
+	img#developerLogo:hover {
+		transform: none;
 	}
 
 
@@ -688,21 +696,23 @@ body.loading {
 	}
 
 	@keyframes textRotate2 {
-		0% { 3			opacity:0;
+		0% { opacity:0;
 		}
+
 		25% {
 			opacity: 1;
 			margin-left: 0em;
 		}
+
 		50% {
-			opacity:0;
-			margin-left: 0.;
-		}
-		100% {
 			opacity:0;
 			margin-left: 0;
 		}
 
+		100% {
+			opacity:0;
+			margin-left: 0;
+		}
 	}
 
 	#prof1, #prof2, #prof3, #greet1, #greet2, #greet3 {
@@ -710,6 +720,7 @@ body.loading {
 		right: 0;
 		margin: 0 auto;
 		display: block;
+		position: absolute;
 	}
 
 	#aboutMe div.section-wrap{
@@ -727,7 +738,6 @@ body.loading {
 		margin: 0;
 		height: auto;
 		text-align: center;
-		overflow-y: show;
 	}
 
 	.grid-container {
@@ -741,19 +751,25 @@ body.loading {
 		margin-right: 0em;
 		margin-top: 60px;
 
-
 	}
+
+	.contact.section {
+		text-align: center;
+		margin: 0 1em 0 1em;
+	}
+
+
 
 	div.loadingScreen {
-		margin: 0 1em 0 1em;
+		margin: 0 2em 0 2em;
 		width: 300px;
 		text-align: center;
-
-
 	}
+
 	#progressbar-container {
+
 		margin: 0;
-		width: 300px;
+		width: 250px;
 		padding: 0;
 
 	}
@@ -763,7 +779,8 @@ body.loading {
 		/*	border:  rgb(0, 182, 255) solid 1px;*/
 		height: auto;
 		color: orange;
-		margin-left: 8em;
+		margin:0;
+
 
 	}
 
@@ -771,5 +788,38 @@ body.loading {
 		font-size: 1em;
 /*		text-align: center;
 */	}
+
+}
+
+@media only screen and (max-width: 436px) {
+	h1 {
+		font-size: 1em;
+	}
+
+	main p {
+		margin: 0 -2em 0 -2em;
+	}
+	
+	.loadingScreen {
+		white-space: nowrap;
+		position: static;
+		margin-left: 250px;
+	}
+
+	.contact.section h2{
+		font-size: 2em;
+	}
+
+	.contact.section {
+		text-align: center;
+		margin: 0 2em 0 2em;
+	}
+
+	#contact textarea {
+		resize: none;
+		width: 200px;
+		height: 200px;
+	}
+
 
 }
