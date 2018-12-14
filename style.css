@@ -375,6 +375,31 @@ h1 {
 	font-size: 150%;
 	animation: expand 1s, gridRotate 1s ;
 	transition: 1s;
+	text-align: center;
+}
+
+.grid-item:hover img {
+	animation: swing ease-in-out 0.5s infinite alternate;
+
+}
+
+.grid-item img {
+	height: 150px;
+	animation: swing 0.4s ease-out;
+	transition: 0.4s;
+}
+
+/*https://codepen.io/ChrisMla/pen/jWMLWY*/
+/*swing animation!*/
+.swing {
+	animation: swing ease-in-out 0.5s alternate;
+	transform-origin: center -20px;
+	animation-iteration-count: 4;
+}
+
+@keyframes swing {
+	0% { transform: rotate(6deg); }
+	100% { transform: rotate(-6deg); }
 }
 
 .grid-item:hover {
@@ -600,7 +625,7 @@ body.loading {
 }
 
 
-@media only screen and (max-width: 674px) and (orientation: portrait) {
+@media only screen and (max-width: 674px) {
 	#body-wrap {
 		display: flex;
 		flex-direction: column;
@@ -786,7 +811,7 @@ body.loading {
 
 }
 
-@media only screen and (max-width: 436px) and (orientation: portrait) {
+@media only screen and (max-width: 436px) {
 	h1 {
 		font-size: 1em;
 	}
