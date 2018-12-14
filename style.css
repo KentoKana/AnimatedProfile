@@ -392,9 +392,9 @@ h1 {
 /*https://codepen.io/ChrisMla/pen/jWMLWY*/
 /*swing animation!*/
 .swing {
-	animation: swing ease-in-out 0.5s alternate;
+	animation: swing ease-in-out 0.4s alternate;
 	transform-origin: center -20px;
-	animation-iteration-count: 4;
+	animation-iteration-count: 6;
 }
 
 @keyframes swing {
