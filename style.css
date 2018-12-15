@@ -376,10 +376,14 @@ h1 {
 	animation: expand 1s, gridRotate 1s ;
 	transition: 1s;
 	text-align: center;
+
 }
 
 .grid-item:hover .swing {
 	animation: swing ease-in-out 0.5s infinite alternate;
+	filter: grayscale(0%);
+	transition: 0.5s ease-in-out;
+
 
 }
 
@@ -387,6 +391,7 @@ h1 {
 	height: 150px;
 	animation: swing 0.4s ease-out;
 	transition: 0.4s;
+
 }
 
 /*https://codepen.io/ChrisMla/pen/jWMLWY*/
@@ -395,6 +400,9 @@ h1 {
 	animation: swing ease-in-out 0.4s alternate;
 	transform-origin: center -20px;
 	animation-iteration-count: 6;
+	filter: grayscale(100%);
+	transition: 0.5s ease-in-out;
+
 }
 
 @keyframes swing {
